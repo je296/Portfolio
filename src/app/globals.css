@@ -748,3 +748,29 @@ footer > a:last-child {
   .project-article { grid-template-columns: 1fr; gap: 24px; padding-block: 32px; }
   .project-article-header h3 { font-size: 26px; }
 }
+
+.about-content { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }
+.about-heading > span { color: var(--accent-blue); }
+.contact-section > .contact-intro { margin-top: 16px; }
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 100%;
+  margin-top: 24px;
+  padding-block: 8px;
+  font-size: clamp(18px, 2.5vw, 30px);
+  line-height: 1.5;
+  color: var(--accent-blue);
+}
+.contact-email span { min-width: 0; overflow-wrap: anywhere; }
+.contact-email svg { flex-shrink: 0; }
+.contact-email:hover span { text-decoration: underline; text-underline-offset: 6px; }
+.about-subtitle { margin-top: 12px; color: var(--text-muted); font-size: 16px; line-height: 1.7; }
+.about-content .about-copy { width: 100%; max-width: 85ch; }
+.about-content .about-copy > p { font-size: 17px; line-height: 1.9; color: var(--text-muted); margin: 0; }
+.about-content .skills { margin: 28px 0 0; gap: 18px 28px; }
+@media (max-width: 767px) {
+  .about-content { gap: 22px; }
+  .about-content .about-copy > p { font-size: 16px; }
+}

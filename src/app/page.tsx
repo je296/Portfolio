@@ -1,11 +1,9 @@
 import {
-  ArrowDown,
   ArrowDownRight,
   ArrowUpRight,
   Code2,
-  Database,
+  Mail,
   MapPin,
-  Server,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { profile, projects } from "@/lib/portfolio";
@@ -115,25 +113,24 @@ export default function Home() {
           </div>
         </section>
         <section id="about" className="about-section">
-          <div className="wrap about-grid">
+          <div className="wrap about-content">
             <div>
               <div className="eyebrow">02 / About Me</div>
-              <h2>
-                Nuttanon U. (Earth)
-                <br />
-                You can call me 'Earth'<span></span>
+              <h2 className="about-heading">
+                Hi, I’m <span>Earth.</span>
               </h2>
+              <p className="about-subtitle">
+                {profile.name} · {profile.role}
+              </p>
             </div>
             <div className="about-copy">
               <p>
-              </p>
-              <p>
                 I currently obsess in present era of software engineering  
                 with LLM accelerate process, the speed of shipping product has become faster than before and 
-                make it easier for leaning new stack and knowledge in this career more than ever. I'm looking 
-                forward to working with you in the future if my skill got your interest and I'm not have some 
-                skill that require for working with I'm assure you I can learn and adapt fast which you can see in my work experience 
-                I'm always into something new please.
+                make it easier for leaning new stack and knowledge in this career more than ever. I&apos;m looking 
+                forward to working with you in the future if my skill got your interest and I&apos;m not have some 
+                skill that require for working with I&apos;m assure you I can learn and adapt fast which you can see in my work experience 
+                I&apos;m always into something new please.
               </p>
               <div className="skills">
                 <span>
@@ -151,27 +148,14 @@ export default function Home() {
         </section>
         <section id="contact" className="contact-section wrap">
           <div className="eyebrow">03 / Contact Me</div>
-          <div className="contact-main">
-            <h2>
-              Your next idea.
-              <br />
-              <span>Let’s built it.</span>
-            </h2>
-            <Button asChild className="contact-button">
-              <a
-                href={`mailto:${profile.email}`}
-                aria-label={`Say hello by email to ${profile.email}`}
-              >
-                <ArrowUpRight />
-              </a>
-            </Button>
-          </div>
-          <p>
-            Contact for work
+          <h2>Contact for work</h2>
+          <p className="contact-intro">
+            For job opportunities or project enquiries, email me at:
           </p>
-          <a className="email-link" href={`mailto:${profile.email}`}>
-            {profile.email}
-            <ArrowUpRight size={19} />
+          <a className="contact-email" href={`mailto:${profile.email}`}>
+            <Mail size={24} aria-hidden="true" />
+            <span>{profile.email}</span>
+            <ArrowUpRight size={22} aria-hidden="true" />
           </a>
         </section>
       </main>

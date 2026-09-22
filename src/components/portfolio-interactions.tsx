@@ -11,8 +11,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 const links = [
-  { href: "#work", label: "Work" },
   { href: "#about", label: "About" },
+  { href: "#work", label: "Work" },
   { href: "#contact", label: "Contact" },
 ];
 export function Navigation() {

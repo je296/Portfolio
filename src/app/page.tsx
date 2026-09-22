@@ -73,7 +73,7 @@ export default function Home() {
         <section id="about" className="border-y bg-surface py-14 sm:py-20">
           <div className="mx-auto flex w-full max-w-7xl flex-col items-start gap-6 px-5 sm:gap-7 sm:px-8 lg:px-12">
             <div>
-              <div className="text-[10px] font-normal tracking-widest text-muted-foreground sm:text-xs">02 / About Me</div>
+              <div className="text-[10px] font-normal tracking-widest text-muted-foreground sm:text-xs">01 / About Me</div>
               <h2 className="mt-5 text-3xl leading-tight font-normal tracking-tight sm:text-4xl lg:text-[44px]">
                 Hi, I’m <span className="text-highlight">Earth.</span>
               </h2>
@@ -112,7 +112,7 @@ export default function Home() {
           <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="mb-7 sm:mb-10">
               <div>
-                <div className="text-[10px] font-normal tracking-widest text-muted-foreground sm:text-xs">01 / WORK</div>
+                <div className="text-[10px] font-normal tracking-widest text-muted-foreground sm:text-xs">02 / WORK</div>
                 <h2 className="mt-5 text-3xl leading-tight font-normal tracking-tight sm:text-4xl lg:text-[44px]">
                   Systems that I built.
                 </h2>

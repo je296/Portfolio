@@ -40,9 +40,9 @@ export function Navigation() {
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
-              <SheetTitle>Explore</SheetTitle>
+              <SheetTitle>Nuttanon U.</SheetTitle>
               <SheetDescription>
-                Software, systems, and the work behind them.
+                Portfolio.
               </SheetDescription>
             </SheetHeader>
             <nav

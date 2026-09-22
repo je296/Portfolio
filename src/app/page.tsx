@@ -2,6 +2,10 @@ import {
   ArrowDownRight,
   ArrowUpRight,
   Code2,
+  Languages,
+  Users,
+  BookOpen,
+  Lightbulb,
   Mail,
   MapPin,
 } from "lucide-react";
@@ -20,9 +24,9 @@ export default function Home() {
       <a href="#main" className="fixed -top-24 left-4 z-100 bg-primary px-5 py-3 text-primary-foreground focus:top-4">
         Skip to content
       </a>
-      <header className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between gap-4 border-b px-5 sm:h-25 sm:px-8 lg:px-12">
+      <header className="flex h-20 w-full items-center justify-between gap-4 border-b px-5 sm:h-25 sm:px-8 lg:px-12">
         <a className="inline-flex items-center text-lg leading-none font-medium tracking-tight sm:text-2xl" href="#" aria-label="Nutta home">
-          <Code2 className="mr-2.5 size-6 shrink-0 text-highlight" aria-hidden="true" /> Portfolio (K. Earth)
+          <Code2 className="mr-2.5 size-6 shrink-0 text-highlight" aria-hidden="true" /> Portfolio
         </a>
         <Navigation />
       </header>
@@ -83,21 +87,22 @@ export default function Home() {
                 with LLM accelerate process, the speed of shipping product has become faster than before and 
                 make it easier for leaning new stack and knowledge in this career more than ever. I&apos;m looking 
                 forward to working with you in the future if my skill got your interest and I&apos;m not have some 
-                skill that require for working with I&apos;m assure you I can learn and adapt fast which you can see in my work experience 
-                I&apos;m always into something new please.
+                skill that require for working with, I&apos;m assure you I can learn and adapt fast which you can see in my work experience. 
+                I&apos;m always into something new and challenging so if you&apos;re looking for someone that up for the challenge, 
+                I&apos;m sure the one worth looking into.
               </p>
               <div className="mt-7 flex flex-wrap gap-x-7 gap-y-4 text-sm text-secondary-foreground">
                 <span className="inline-flex items-center gap-2">
-                  <Code2 size={17} className="text-highlight" aria-hidden="true" /> English Speaker
+                  <Languages size={17} className="shrink-0 text-highlight" aria-hidden="true" /> English communication
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Code2 size={17} className="text-highlight" aria-hidden="true" /> Team Worker
+                  <Users size={17} className="shrink-0 text-highlight" aria-hidden="true" /> Teamwork
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Code2 size={17} className="text-highlight" aria-hidden="true" /> Fast Learner
+                  <BookOpen size={17} className="shrink-0 text-highlight" aria-hidden="true" /> Quick learner
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Code2 size={17} className="text-highlight" aria-hidden="true" /> Open Mind
+                  <Lightbulb size={17} className="shrink-0 text-highlight" aria-hidden="true" /> Open-minded
                 </span>
               </div>
             </div>
@@ -130,6 +135,12 @@ export default function Home() {
                   <div className="min-w-0 max-w-[72ch] wrap-anywhere lg:col-span-2">
                     {project.tagline?.trim() && <p className="text-lg leading-7 whitespace-pre-line text-secondary-foreground">{project.tagline}</p>}
                     {project.description?.trim() && <p className="text-base leading-[1.9] whitespace-pre-line text-muted-foreground [&:not(:first-child)]:mt-5">{project.description}</p>}
+                    {project.responsibility?.trim() && (
+                      <section className="mt-7">
+                        <h4 className="mb-2 text-base font-medium">Responsibility</h4>
+                        <p className="text-base leading-[1.9] whitespace-pre-line text-muted-foreground">{project.responsibility}</p>
+                      </section>
+                    )}
                     {project.challenge?.trim() && (
                       <section className="mt-7">
                         <h4 className="mb-2 text-base font-medium">The challenge</h4>

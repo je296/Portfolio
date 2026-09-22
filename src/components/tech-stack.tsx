@@ -14,14 +14,14 @@ export function TechStack({ stack }: { stack: readonly string[] }) {
   if (stack.length === 0) return null;
 
   return (
-    <section className="stack-strip" aria-label="Technology stack">
-      <ul className="wrap stack-list">
+    <section className="border-y border-border bg-background" aria-label="Technology stack">
+      <ul className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-x-4 gap-y-5 px-5 py-7 sm:grid-cols-3 sm:gap-6 sm:px-8 lg:grid-cols-4 lg:px-12 xl:grid-cols-6">
         {stack.map((technology, index) => {
           const Icon = stackIcon(technology);
           return (
-            <li key={`${technology}-${index}`}>
-              <Icon size={18} aria-hidden="true" />
-              <span>{technology}</span>
+            <li className="flex min-w-0 items-start gap-2.5 text-sm font-normal text-muted-foreground" key={`${technology}-${index}`}>
+              <Icon className="mt-0.5 size-4.5 shrink-0 text-highlight" aria-hidden="true" />
+              <span className="wrap-anywhere">{technology}</span>
             </li>
           );
         })}

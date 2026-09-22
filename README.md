@@ -17,10 +17,10 @@ Open http://localhost:3000.
 - Edit `src/app/page.tsx` for the wordmark, about text, toolkit, and section content.
 - Edit `src/components/engineering-art.tsx` for the code editor, system architecture, and workflow illustrations.
 - Edit `src/app/layout.tsx` for page title and description.
-- Edit `src/app/globals.css` for theme tokens, layout, and responsive styles.
+- Edit `src/app/globals.css` for shared theme tokens and base styles. Layout and responsive styling use Tailwind utilities directly in the components, with standard `sm`, `md`, `lg`, and `xl` breakpoints.
 - Replace `src/app/icon.svg` with your own favicon.
 
-The initial project content and preview artwork are illustrative concepts. Replace the sample descriptions and artwork with your own work. Clicking a project opens its details in an accessible dialog. Contact links open the visitor's email application; no form service or backend is required.
+Project details render as inline articles using the content in `src/lib/portfolio.ts`. Contact links open the visitor's email application; no form service or backend is required.
 
 ## Checks
 
@@ -29,4 +29,4 @@ npm run lint
 npm run build
 ```
 
-After a production build, run `npm start`. Kanit is provided by `@fontsource/kanit` and served locally through `next/font/local`, so builds do not fetch Google Fonts. The page uses server-rendered content with small client components for dialogs and mobile navigation. Reduced-motion preferences, visible keyboard focus, and a skip link are supported.
+After a production build, run `npm start`. Kanit is provided by `@fontsource/kanit` and served locally through `next/font/local`, so builds do not fetch Google Fonts. The page uses server-rendered content with a small client component for mobile navigation. Reduced-motion preferences, visible keyboard focus, and a skip link are supported. Section backgrounds span the full viewport; their content shares a centered container.

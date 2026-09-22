@@ -36,7 +36,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${kanit.variable} dark antialiased`}>
+    <html lang="en" className={`${kanit.variable} dark scroll-pt-8 scroll-smooth antialiased scheme-dark motion-reduce:scroll-auto`}>
       <body>{children}</body>
     </html>
   );

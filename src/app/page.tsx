@@ -17,6 +17,7 @@ import {
 import Image from "next/image";
 import profilePicture from "./assets/profile-pic.jpg";
 import { TechStack } from "@/components/tech-stack";
+import { SystemArchitecture } from "@/components/system-architecture";
 
 export default function Home() {
   return (
@@ -125,6 +126,9 @@ export default function Home() {
                     </div>
                     <h3 id={`project-${project.slug}`} className="mt-4 text-2xl leading-snug font-normal tracking-tight sm:text-[28px]">{project.name}</h3>
                     <p className="mt-2.5 text-sm text-muted-foreground">{project.category}</p>
+                    {project.architecture && (
+                      <SystemArchitecture architecture={project.architecture} projectSlug={project.slug} projectName={project.name} />
+                    )}
                   </header>
                   <div className="min-w-0 max-w-[72ch] wrap-anywhere lg:col-span-2">
                     {project.tagline?.trim() && <p className="text-lg leading-7 whitespace-pre-line text-secondary-foreground">{project.tagline}</p>}

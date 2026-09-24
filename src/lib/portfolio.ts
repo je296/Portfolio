@@ -1,12 +1,14 @@
-export const profile = {
+﻿export const profile = {
   name: "Nuttanon Ungkachan",
   role: "Full-Stack Software Engineer",
   location: "Bangkok, Thailand",
   email: "nuttanon.u@proton.me",
+  github: "https://github.com/je296",
   introduction:
     "I’m a software engineer who builds applications for high-volume banking workflows. My experience spans a software house and one of Thailand’s leading banks.",
   stack: [
     "Angular",
+    "Next.js",
     "Next.js",
     "Zoral Platform",
     "Node.js (Express)",

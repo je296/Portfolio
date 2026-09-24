@@ -11,15 +11,18 @@ export const profile = {
     "Zoral Platform",
     "Node.js (Express)",
     "Java Spring Boot",
-    "Go (Gin)",
-    "SQL (PostgreSQL, MySQL)",
     "GraphQL",
+    "PostgreSQL",
+    "MySQL",
+    "Prisma",
     "Convex",
+    "MUI",
+    "Chakra UI",
     "Tailwind CSS",
     "shadcn/ui",
-    "Git",
-  ],
-};
+    "WorkOS",
+    "Vercel",
+  ],};
 
 export const projects = [
   {

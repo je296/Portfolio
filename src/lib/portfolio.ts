@@ -9,7 +9,6 @@
   stack: [
     "Angular",
     "Next.js",
-    "Next.js",
     "Zoral Platform",
     "Node.js (Express)",
     "Java Spring Boot",
@@ -24,7 +23,8 @@
     "shadcn/ui",
     "WorkOS",
     "Vercel",
-  ],};
+  ],
+};
 
 export const projects = [
   {
@@ -44,6 +44,21 @@ export const projects = [
     approach:
       "I drew on my Angular, Next.js, and Node.js experience to understand the platform’s React and Node.js foundations. That helped me troubleshoot issues and deliver features more efficiently.",
     stack: ["Zoral Platform", "Node.js (Express)", "MUI", "GraphQL", "PostgreSQL"],
+    architecture: {
+      summary: "ZBO and ZDE share GraphQL data access on Microsoft Azure, with Redis caching and scheduled Python batch jobs.",
+      actor: "Bank tellers",
+      environment: "Microsoft Azure",
+      application: { name: "ZBO", description: "Zoral Back Office · User-facing web application" },
+      service: { name: "ZDE", description: "Zoral Decision Engine · Interface endpoint" },
+      dataAccess: { name: "ADW", description: "Shared GraphQL data access through Hasura" },
+      database: { name: "PostgreSQL", description: "Application database shared by online and batch workflows" },
+      cache: { name: "Redis", description: "Caching layer for the application" },
+      batch: {
+        orchestrator: { name: "Azure Data Factory", description: "Orchestrates batch workflows" },
+        worker: { name: "Python batch jobs", description: "Batch logic maintained in a dedicated repository" },
+        databaseConnection: "PostgreSQL access via Psycopg",
+      },
+    },
   },
   {
     slug: "ias",
@@ -62,6 +77,17 @@ export const projects = [
     approach:
       "I worked closely with senior engineers, learned the system through assigned tasks, and used feedback from reviews and testing to improve my implementation.",
     stack: ["Angular 14", "Tailwind CSS", "Java Spring Boot", "MySQL"],
+    architecture: {
+      summary: "An Angular application backed by Java Spring Boot, MySQL, and Redis on AWS.",
+      actor: "Internal audit teams",
+      environment: "Amazon Web Services",
+      application: { name: "Angular", description: "Audit workflow screens and user interface" },
+      service: { name: "Java Spring Boot", description: "Backend APIs and business logic" },
+      dataAccess: { name: "Data access", description: "Backend persistence layer" },
+      database: { name: "MySQL", description: "Audit records and application data" },
+      cache: { name: "Redis", description: "Caching layer for the application" },
+      flow: { applicationToService: "API", serviceToData: "Data access", serverOnlyDataAccess: true },
+    },
   },
   {
     slug: "rfs",
@@ -79,6 +105,18 @@ export const projects = [
     approach:
       "I applied concepts from my Angular work to React and learned Next.js’s server-side patterns as I built the prototype. This helped me move quickly while adapting to a new stack.",
     stack: ["Next.js", "Chakra UI", "Prisma (SQL ORM)", "Neon (PostgreSQL)", "WorkOS"],
+    architecture: {
+      summary: "A Next.js application on Vercel using Server Actions, Prisma, Neon PostgreSQL, and WorkOS authentication.",
+      actor: "Hospital staff",
+      environment: "Vercel",
+      application: { name: "Next.js", description: "Referral workflow interface" },
+      service: { name: "Server Actions", description: "Server-side referral logic and authorization" },
+      dataAccess: { name: "Prisma", description: "SQL ORM used by server-side code" },
+      database: { name: "Neon PostgreSQL", description: "Hosted database for referral records" },
+      externalDatabase: true,
+      flow: { applicationToService: "Calls", serviceToData: "Prisma calls", serverOnlyDataAccess: true },
+      authentication: { name: "WorkOS", description: "User authentication" },
+    },
   },
   {
     slug: "salarycal",
@@ -97,5 +135,16 @@ export const projects = [
     approach:
       "I built the calculation workflow first, then added configurable formulas, administration features, authentication, and access controls for approved users. I used documentation and AI-assisted research to learn the new stack as I worked.",
     stack: ["Next.js", "shadcn/ui", "Tailwind CSS", "Convex", "Vercel"],
+    architecture: {
+      kind: "reactive" as const,
+      summary: "A Next.js application on Vercel connected to Convex functions and its reactive database.",
+      actor: "Approved business users",
+      environment: "Vercel",
+      application: { name: "Next.js", description: "Salary calculations and administration interface" },
+      backendEnvironment: "Convex",
+      service: { name: "Convex functions", description: "Queries, mutations, and salary calculation logic" },
+      database: { name: "Convex database", description: "Employee records, salary data, and configurable formulas" },
+      accessControl: { name: "Access control", description: "Approved users and role-based permissions" },
+    },
   },
 ];

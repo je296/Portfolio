@@ -36,7 +36,7 @@ export const projects = [
     description:
       "Nextgen Lendings replaces a legacy application used by bank tellers. It is built on Zoral Platform, a low-code platform with a React and MUI frontend and a Node.js (Express) and GraphQL backend.",
     responsibility:
-      "I developed full-stack features for a banking system that handles millions of transactions a day. My work included frontend pages, backend APIs, internal application reports, batch jobs with Azure Data Factory, performance tuning, and issue resolution.",
+      "I developed frontend pages, backend APIs, internal reports, and Azure Data Factory batch jobs. I optimized a migration feature working with approximately 10 million database records, reducing a slow query from minutes to under a millisecond by adding a database index and refining the GraphQL query. I also cut the runtime of a loan application task report from more than five minutes to under three seconds by using DBeaver to analyze the query bottleneck and adding a targeted database index.",
     challenge:
       "Zoral Platform has limited documentation, which made syntax errors and platform issues difficult to diagnose. Some problems required support from the platform team, slowing development.",
     approach:

@@ -25,7 +25,7 @@ export default function Home() {
         Skip to content
       </a>
       <header className="flex h-20 w-full items-center justify-between gap-4 border-b px-5 sm:h-25 sm:px-8 lg:px-12">
-        <a className="inline-flex items-center text-lg leading-none font-medium tracking-tight sm:text-2xl" href="#" aria-label="Nutta home">
+        <a className="inline-flex items-center text-lg leading-none font-medium tracking-tight sm:text-2xl" href="#" aria-label="Portfolio home">
           <Code2 className="mr-2.5 size-6 shrink-0 text-highlight" aria-hidden="true" /> Portfolio
         </a>
         <Navigation />
@@ -35,12 +35,12 @@ export default function Home() {
           <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-start gap-9 px-5 pt-10 pb-16 sm:px-8 sm:pt-16 lg:grid-cols-2 lg:gap-16 lg:px-12 lg:pt-19">
             <div className="min-w-0">
               <div className="flex items-center gap-2.5 text-[10px] font-normal tracking-widest text-muted-foreground sm:text-xs">
-                <span className="size-2 shrink-0 rounded-full bg-highlight ring-4 ring-highlight/10" /> Performance Enthusias
+                <span className="size-2 shrink-0 rounded-full bg-highlight ring-4 ring-highlight/10" /> Performance Enthusiast
               </div>
               <h1 id="hero-title" className="mt-5 text-3xl leading-tight font-normal tracking-tight sm:text-4xl xl:text-[44px]">
                 Full-Stack Software Engineer
                 <br />
-                <span className="text-muted-foreground">Built to scale.</span>
+                <span className="text-muted-foreground">Focused on reliable systems.</span>
               </h1>
               <p className="mt-4 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-[17px] sm:leading-[1.85]">{profile.introduction}</p>
               <div className="my-6 flex flex-wrap gap-4 text-[10px] font-normal tracking-wider text-muted-foreground sm:text-xs">
@@ -83,17 +83,11 @@ export default function Home() {
             </div>
             <div className="w-full max-w-[85ch]">
               <p className="text-base leading-[1.9] text-muted-foreground sm:text-[17px]">
-                I currently obsess in present era of software engineering  
-                with LLM accelerate process, the speed of shipping product has become faster than before and 
-                make it easier for leaning new stack and knowledge in this career more than ever. I&apos;m looking 
-                forward to working with you in the future if my skill got your interest and I&apos;m not have some 
-                skill that require for working with, I&apos;m assure you I can learn and adapt fast which you can see in my work experience. 
-                I&apos;m always into something new and challenging so if you&apos;re looking for someone that up for the challenge, 
-                I&apos;m sure the one worth looking into.
+                I enjoy learning new tools and applying them to practical problems. Working on banking and internal business systems has taught me to adapt to unfamiliar stacks, collaborate with teammates, and keep improving through feedback. I use AI tools to speed up research and experimentation while staying responsible for the work I deliver.
               </p>
               <div className="mt-7 flex flex-wrap gap-x-7 gap-y-4 text-sm text-secondary-foreground">
                 <span className="inline-flex items-center gap-2">
-                  <Languages size={17} className="shrink-0 text-highlight" aria-hidden="true" /> English communication
+                  <Languages size={17} className="shrink-0 text-highlight" aria-hidden="true" /> Communication in English
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <Users size={17} className="shrink-0 text-highlight" aria-hidden="true" /> Teamwork
@@ -114,10 +108,10 @@ export default function Home() {
               <div>
                 <div className="text-[10px] font-normal tracking-widest text-muted-foreground sm:text-xs">02 / WORK</div>
                 <h2 className="mt-5 text-3xl leading-tight font-normal tracking-tight sm:text-4xl lg:text-[44px]">
-                  Systems that I built.
+                  Systems I’ve helped build.
                 </h2>
                 <p className="mt-2 text-base text-muted-foreground">
-                  Application Details 
+                  Projects and my contributions
                 </p>
               </div>
             </div>
@@ -137,7 +131,7 @@ export default function Home() {
                     {project.description?.trim() && <p className="text-base leading-[1.9] whitespace-pre-line text-muted-foreground [&:not(:first-child)]:mt-5">{project.description}</p>}
                     {project.responsibility?.trim() && (
                       <section className="mt-7">
-                        <h4 className="mb-2 text-base font-medium">Responsibility</h4>
+                        <h4 className="mb-2 text-base font-medium">My contributions</h4>
                         <p className="text-base leading-[1.9] whitespace-pre-line text-muted-foreground">{project.responsibility}</p>
                       </section>
                     )}
@@ -167,9 +161,9 @@ export default function Home() {
         <section id="contact" className="border-y bg-surface py-14 sm:py-20">
           <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="text-[10px] font-normal tracking-widest text-muted-foreground sm:text-xs">03 / Contact Me</div>
-            <h2 className="mt-5 text-3xl leading-tight font-normal tracking-tight sm:text-4xl lg:text-[44px]">Contact for work</h2>
+            <h2 className="mt-5 text-3xl leading-tight font-normal tracking-tight sm:text-4xl lg:text-[44px]">Let’s work together</h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              For job opportunities or project enquiries, email me at:
+              For job opportunities or project inquiries, email me at:
             </p>
             <a className="group mt-6 inline-flex max-w-full items-center gap-3 py-2 text-lg leading-normal text-highlight sm:gap-4 sm:text-2xl lg:text-3xl" href={`mailto:${profile.email}`}>
               <Mail size={24} className="shrink-0" aria-hidden="true" />
